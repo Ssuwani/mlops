@@ -6,9 +6,9 @@
 
 MNIST 데이터셋으로 학습한 모델 Serving 
 
-1. Flask
-2. bentoml
-3. kubeflow
-
-
+| Type     | Complete           |
+| -------- | ------------------ |
+| Flask    | :white_check_mark: |
+| bentoml  |                    |
+| kubeflow |                    |
 
