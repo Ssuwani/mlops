@@ -8,9 +8,9 @@
 
 MNIST 데이터셋으로 학습한 모델 Serving 
 
-| Type                                     | Complete           |
-| ---------------------------------------- | ------------------ |
-| [Flask](./mnist_serving/flask/README.md) | :white_check_mark: |
-| bentoml                                  |                    |
-| kubeflow                                 |                    |
+| Type                                         | Complete           |
+| -------------------------------------------- | ------------------ |
+| [Flask](./mnist_serving/flask/README.md)     | :white_check_mark: |
+| [BentoML](./mnist_serving/bentoml/README.md) | :white_check_mark: |
+| kubeflow                                     |                    |
 
