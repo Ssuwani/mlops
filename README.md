@@ -14,3 +14,11 @@ MNIST 데이터셋으로 학습한 모델 Serving
 | [BentoML](./mnist_serving/bentoml/README.md) | :white_check_mark: |
 | kubeflow                                     |                    |
 
+
+IRIS 데이터셋으로 학습한 모델 Serving
+
+| Type                                         | Complete           |
+| -------------------------------------------- | ------------------ |
+| Flask                                        |                    |
+| BentoML                                      |                    |
+| kubeflow                                     |                    |
