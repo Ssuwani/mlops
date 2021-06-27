@@ -28,7 +28,7 @@ def data_preprocessing(pil_image):
 @bentoml.artifacts([TensorflowSavedModelArtifact('model')])
 class MnistTensorflow(bentoml.BentoService):
     @bentoml.api(input=ImageInput())
-    def predict(self, image):
+    def prediction(self, image):
         pil_image = Image.fromarray(image)
         prediction_array = data_preprocessing(pil_image)
 
