@@ -41,4 +41,4 @@ def prediction_route():
     return {"result": int(prediction)}
 
 
-app.run(debug=True)
+app.run(debug=True, port=5000)
