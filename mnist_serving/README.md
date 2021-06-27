@@ -36,6 +36,7 @@ python fastapi_serving.py # port 5001
 
 ```bash
 python bentoml_serving.py
+# After doing this, a Prediction Service will be created `~/bentoml/repository/MnistTensorflow/`
 
 bentoml serve MnistTensorflow:latest --port=5002 # port 5002
 ```
