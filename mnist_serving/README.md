@@ -42,6 +42,18 @@ bentoml serve MnistTensorflow:latest --port=5002 # port 5002
 
 
 
+**Test**
+
+```bash
+curl -F "file=@asset/img_0.jpg" localhost:5000/prediction
+curl -F "file=@asset/img_0.jpg" localhost:5001/prediction
+curl -F "file=@asset/img_0.jpg" localhost:5002/prediction
+```
+
+
+
+
+
 **Demo Video**
 
-![demo](./demo.gif)
+![demo](./asset/demo.gif)
