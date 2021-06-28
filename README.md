@@ -4,19 +4,10 @@
 
 MNIST 데이터셋으로 학습한 모델 Serving 
 
-| Type     | Complete           |
-| -------- | ------------------ |
-| Flask    | :white_check_mark: |
-| FastAPI  | :white_check_mark: |
-| BentoML  | :white_check_mark: |
-| kubeflow |                    |
+| Type | Flask              | FastAPI            | BentoML            | Kubeflow |
+| ---- | ------------------ | ------------------ | ------------------ | -------- |
+| CNN  | :white_check_mark: | :white_check_mark: | :white_check_mark: |          |
+| DNN  | :white_check_mark: | :white_check_mark: | :white_check_mark: |          |
 
 
-IRIS 데이터셋으로 학습한 모델 Serving
 
-| Type     | Complete           |
-| -------- | ------------------ |
-| Flask    | :white_check_mark: |
-| FastAPI  | :white_check_mark: |
-| BentoML  | :white_check_mark: |
-| kubeflow |                    |

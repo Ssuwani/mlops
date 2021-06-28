@@ -5,7 +5,7 @@ from PIL import Image
 import bentoml
 import numpy as np
 
-model_path = 'models/mnist_cnn.ckpt'
+model_path = '../models/mnist_cnn.ckpt'
 model = load_model(model_path)
 
 input_shape = model.layers[0].input_shape
@@ -37,7 +37,8 @@ class MnistTensorflow(bentoml.BentoService):
         return {"result": int(prediction)}
 
 
-bento_service = MnistTensorflow()
-bento_service.pack('model', model)
+if __name__ == '__main__':
+    bento_service = MnistTensorflow()
+    bento_service.pack('model', model)
 
-saved_path = bento_service.save()
+    saved_path = bento_service.save()
