@@ -1,21 +1,22 @@
-from flask import Flask, request
 import numpy as np
+from fastapi import FastAPI
+from pydantic import BaseModel
 import pickle
+import uvicorn
 
-model_path = 'models/iris.pkl'
+model_path = '../models/iris.pkl'
 model = pickle.load(open(model_path, 'rb'))
 
-app = Flask(__name__)
+app = FastAPI()
 
 
-@app.route('/')
+@app.get('/')
 def root_route():
     return {"error": "use POST /prediction instead of root route"}
 
 
-@app.route('/prediction', methods=["POST"])
-def prediction_route():
-    iris_features = request.json
+@app.post('/prediction')
+def prediction_route(iris_features: dict):
     iris_data = [iris_features['sepal_l'], iris_features['sepal_w'], iris_features['petal_l'], iris_features['petal_w']]
     prediction_array = np.array([iris_data])
 
@@ -25,4 +26,5 @@ def prediction_route():
     return {"result": int(prediction)}
 
 
-app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    uvicorn.run(app, port=5001)

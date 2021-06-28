@@ -4,7 +4,7 @@ import bentoml
 import numpy as np
 import pickle
 
-model_path = './models/iris.pkl'
+model_path = '../models/iris.pkl'
 model = pickle.load(open(model_path, 'rb'))
 
 
@@ -23,7 +23,8 @@ class IrisClassifier(bentoml.BentoService):
         return {"result": int(prediction)}
 
 
-bento_service = IrisClassifier()
-bento_service.pack('model', model)
+if __name__ == "__main__":
+    bento_service = IrisClassifier()
+    bento_service.pack('model', model)
 
-saved_path = bento_service.save()
+    saved_path = bento_service.save()

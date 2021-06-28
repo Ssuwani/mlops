@@ -1,22 +1,21 @@
+from flask import Flask, request
+from tensorflow.keras.models import load_model
 import numpy as np
-from fastapi import FastAPI
-from pydantic import BaseModel
-import pickle
-import uvicorn
 
-model_path = 'models/iris.pkl'
-model = pickle.load(open(model_path, 'rb'))
+model_path = '../models/iris_dnn.ckpt'
+model = load_model(model_path)
 
-app = FastAPI()
+app = Flask(__name__)
 
 
-@app.get('/')
+@app.route('/')
 def root_route():
     return {"error": "use POST /prediction instead of root route"}
 
 
-@app.post('/prediction')
-def prediction_route(iris_features: dict):
+@app.route('/prediction', methods=["POST"])
+def prediction_route():
+    iris_features = request.json
     iris_data = [iris_features['sepal_l'], iris_features['sepal_w'], iris_features['petal_l'], iris_features['petal_w']]
     prediction_array = np.array([iris_data])
 
@@ -25,6 +24,5 @@ def prediction_route(iris_features: dict):
 
     return {"result": int(prediction)}
 
-
 if __name__ == "__main__":
-    uvicorn.run(app, port=5001)
+    app.run(debug=True)
