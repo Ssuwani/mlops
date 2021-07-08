@@ -11,10 +11,10 @@
 
 **IRIS**
 
-| Type         	| Flask              | FastAPI            | BentoML            | Kubeflow |
-| ------------ 	| ------------------ | ------------------ | ------------------ | -------- |
-| DecisionTree 	| :white_check_mark: | :white_check_mark: | :white_check_mark: |          |
-| DNN          	| :white_check_mark: | :white_check_mark: |                    |          |
+| Type         | Flask              | FastAPI            | BentoML            | mlflow             | Kubeflow |
+| ------------ | ------------------ | ------------------ | ------------------ | ------------------ | -------- |
+| DecisionTree | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |          |
+| DNN          | :white_check_mark: | :white_check_mark: |                    |                    |          |
 
 
 
